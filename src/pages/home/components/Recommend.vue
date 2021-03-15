@@ -2,11 +2,11 @@
   <div>
       <div class="title">热销推荐</div>
       <ul>
-          <router-link tag="li" class="item border-bottom" :to="'/detail/'">
-              <img class="item-img" src="" alt="">
+          <router-link tag="li" v-for="item of list" :key="item.id" class="item border-bottom" :to="'/detail/'">
+              <img class="item-img" :src="item.imgUrl" alt="">
               <div class="item-info">
-                  <p class="item-title"></p>
-                  <p class="item-desc"></p>
+                  <p class="item-title">{{item.title}}</p>
+                  <p class="item-desc">{{item.desc}}</p>
                   <button class="item-button">查看详情</button>
               </div>
           </router-link>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'HomeRecommend'
+  name: 'HomeRecommend',
+  props: {
+    list: Array
+  }
 }
 </script>
 
