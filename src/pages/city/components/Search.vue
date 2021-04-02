@@ -8,7 +8,12 @@
 
 <script>
 export default {
-
+  name: 'CitySearch',
+  data () {
+    return {
+      keyword: ''
+    }
+  }
 }
 </script>
 
