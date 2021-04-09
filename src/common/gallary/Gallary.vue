@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'CommonGallary',
   props: {
     imgs: {
       type: Array,
