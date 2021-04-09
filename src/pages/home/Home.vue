@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('./static/mock/index.json?city=' + this.city)
+      axios.get('/api/index.json?city=' + this.city)
         .then((res) => {
           // 使用es6箭头函数this指向就不会错误
           res = res.data
